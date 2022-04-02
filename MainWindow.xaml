@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DbExpCSV"
         mc:Ignorable="d"
-        Title="DbExpCSV" MinHeight="450" Height="450" MinWidth="800" Width="800" WindowStartupLocation="CenterScreen" ResizeMode="CanResizeWithGrip">
+        Title="DbExpCSV" MinHeight="450" Height="450" MinWidth="800" Width="800" WindowStartupLocation="CenterScreen" ResizeMode="CanResizeWithGrip" Loaded="Window_Loaded">
     <Grid x:Name="grid0">
         <Grid.RowDefinitions>
             <RowDefinition Height="30"/>
@@ -13,7 +13,9 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="30"/>
         </Grid.RowDefinitions>
-        <Menu x:Name="menu" Grid.Row="0"></Menu>
+        <Menu x:Name="menu" Grid.Row="0">
+            
+        </Menu>
         <Grid x:Name="grid1" Grid.Row="1">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
@@ -21,14 +23,24 @@
                 <ColumnDefinition/>
                 <ColumnDefinition Width="100"/>
                 <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="100"/>
             </Grid.ColumnDefinitions>
             <TextBox x:Name="textBoxDb" Grid.Column="0"></TextBox>
             <Button x:Name="btnDb" Grid.Column="1" Content="Connect"></Button>
             <TextBox x:Name="textBoxQuery" Grid.Column="2"></TextBox>
             <Button x:Name="btnExecute" Grid.Column="3" Content="Execute"></Button>
-            <Button x:Name="btnCancel" Grid.Column="4" Content="Cancel"></Button>
+            <Button x:Name="btnExport" Grid.Column="4" Content="Export"></Button>
+            <Button x:Name="btnCancel" Grid.Column="5" Content="Cancel"></Button>
         </Grid>
         <DataGrid x:Name="dataGrid" Grid.Row="2"></DataGrid>
-        <StatusBar x:Name="statusBar" Grid.Row="3"></StatusBar>
+        <StatusBar x:Name="statusBar" Grid.Row="3">
+            <Grid x:Name="grid2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <TextBlock x:Name="tbLoad" Grid.Column="0"/>
+            </Grid>
+        </StatusBar>
     </Grid>
 </Window>

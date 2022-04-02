@@ -21,5 +21,10 @@ namespace DbExpCSV
         {
             InitializeComponent();
         }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            tbLoad.Text = "Ready";
+        }
     }
 }
