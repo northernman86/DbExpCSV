@@ -6,40 +6,85 @@
         xmlns:local="clr-namespace:DbExpCSV"
         mc:Ignorable="d"
         Title="DbExpCSV" MinHeight="450" Height="450" MinWidth="800" Width="800" WindowStartupLocation="CenterScreen" ResizeMode="CanResizeWithGrip" Loaded="Window_Loaded">
+    <Window.Resources>
+        <SolidColorBrush x:Key="colorWhite" Color="White"/>
+        <Style TargetType="GroupBox">
+            <Setter Property="ItemsControl.FontSize" Value="15"/>
+            <Setter Property="ItemsControl.BorderBrush" Value="Black"/>
+            <Setter Property="ItemsControl.Padding" Value="2 10 2 2"/>
+        </Style>
+        <Style TargetType="TextBox">
+            <Setter Property="ItemsControl.HorizontalContentAlignment" Value="Left"/>
+            <Setter Property="ItemsControl.VerticalContentAlignment" Value="Center"/>
+            <Setter Property="ItemsControl.FontFamily" Value="Lucida Console"/>
+            <Setter Property="ItemsControl.FontSize" Value="12"/>
+            <Setter Property="ItemsControl.Padding" Value="10 0 0 0"/>
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="ItemsControl.Width" Value="100"/>
+            <Setter Property="ItemsControl.FontSize" Value="15"/>
+            <Setter Property="ItemsControl.Background" Value="{StaticResource colorWhite}"/>
+        </Style>
+    </Window.Resources>
     <Grid x:Name="grid0">
         <Grid.RowDefinitions>
             <RowDefinition Height="30"/>
-            <RowDefinition Height="30"/>
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="30"/>
         </Grid.RowDefinitions>
-        <Menu x:Name="menu" Grid.Row="0">
+        <Menu x:Name="menu" Grid.Row="0" Background="{StaticResource colorWhite}">
             
         </Menu>
         <Grid x:Name="grid1" Grid.Row="1">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
-                <ColumnDefinition Width="100"/>
                 <ColumnDefinition/>
-                <ColumnDefinition Width="100"/>
-                <ColumnDefinition Width="100"/>
-                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="230"/>
             </Grid.ColumnDefinitions>
-            <TextBox x:Name="textBoxDb" Grid.Column="0"></TextBox>
-            <Button x:Name="btnDb" Grid.Column="1" Content="Connect"></Button>
-            <TextBox x:Name="textBoxQuery" Grid.Column="2"></TextBox>
-            <Button x:Name="btnExecute" Grid.Column="3" Content="Execute"></Button>
-            <Button x:Name="btnExport" Grid.Column="4" Content="Export"></Button>
-            <Button x:Name="btnCancel" Grid.Column="5" Content="Cancel"></Button>
+            <GroupBox Grid.Column="0" Header="Connect to Database">
+                <Grid x:Name="grid11">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="10"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBox x:Name="textBoxDb" Grid.Column="0"></TextBox>
+                    <Button x:Name="btnDb" Grid.Column="2" Content="Connect"></Button>
+                </Grid>
+            </GroupBox>
+            <GroupBox Grid.Column="1" Header="Execute Query">
+                <Grid x:Name="grid12">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="10"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBox x:Name="textBoxQuery" Grid.Column="0"></TextBox>
+                    <Button x:Name="btnExecute" Grid.Column="2" Content="Execute"></Button>
+                </Grid>
+            </GroupBox>
+            <GroupBox Grid.Column="2" Header="Export to CSV">
+                <Grid x:Name="grid13">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Button x:Name="btnExport" Grid.Column="0" Content="Export"></Button>
+                    <Button x:Name="btnCancel" Grid.Column="1" Content="Cancel"></Button>
+                </Grid>
+            </GroupBox>
         </Grid>
-        <DataGrid x:Name="dataGrid" Grid.Row="2"></DataGrid>
-        <StatusBar x:Name="statusBar" Grid.Row="3">
+        <DataGrid x:Name="dataGrid" Grid.Row="2">
+            
+        </DataGrid>
+        <StatusBar x:Name="statusBar" Grid.Row="3" Background="{StaticResource colorWhite}">
             <Grid x:Name="grid2">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto"/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
-                <TextBlock x:Name="tbLoad" Grid.Column="0"/>
+                <TextBlock x:Name="tbLoad" Grid.Column="0" FontSize="13"/>
             </Grid>
         </StatusBar>
     </Grid>
