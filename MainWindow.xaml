@@ -75,7 +75,7 @@
                 </Grid>
             </GroupBox>
         </Grid>
-        <DataGrid x:Name="dataGrid" Grid.Row="2">
+        <DataGrid x:Name="dataGrid" Grid.Row="2" AutoGenerateColumns="True" RowBackground="White" AlternatingRowBackground="AliceBlue" GridLinesVisibility="Vertical" HeadersVisibility="All" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
             
         </DataGrid>
         <StatusBar x:Name="statusBar" Grid.Row="3" Background="{StaticResource colorWhite}">
