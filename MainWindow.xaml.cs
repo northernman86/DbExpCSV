@@ -26,5 +26,10 @@ namespace DbExpCSV
         {
             tbLoad.Text = "Ready";
         }
+
+        private void Exit_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }
