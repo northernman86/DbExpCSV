@@ -42,7 +42,7 @@
                 <MenuItem Header="Exit" Click="Exit_Click"/>
             </MenuItem>
             <MenuItem Header="Help">
-                <MenuItem Header="About"/>
+                <MenuItem Header="About" Click="About_Click"/>
             </MenuItem>
         </Menu>
         <Grid x:Name="grid1" Grid.Row="1">
