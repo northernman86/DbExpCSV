@@ -7,6 +7,11 @@
         mc:Ignorable="d"
         Title="About" Height="450" Width="800" WindowStartupLocation="CenterOwner" ResizeMode="NoResize">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
     </Grid>
 </Window>
