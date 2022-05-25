@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -30,6 +31,16 @@ namespace DbExpCSV
         private void Exit_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }
+
+        private void Hyperlink_Click(object sender, RoutedEventArgs e)
+        {
+            var url = "https://github.com/northernman86/DbExpCSV";
+            var info = new ProcessStartInfo(url)
+            {
+                UseShellExecute = true,
+            };
+            Process.Start(info);
         }
 
         private void About_Click(object sender, RoutedEventArgs e)
