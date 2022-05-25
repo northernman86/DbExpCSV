@@ -45,7 +45,7 @@
                 
             </MenuItem>
             <MenuItem Header="Help">
-                <MenuItem Header="Code on GitHub"/>
+                <Hyperlink Click="Hyperlink_Click">Code on GitHub</Hyperlink>
                 <MenuItem Header="About" Click="About_Click"/>
             </MenuItem>
         </Menu>
