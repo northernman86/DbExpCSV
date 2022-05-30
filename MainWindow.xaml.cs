@@ -28,6 +28,16 @@ namespace DbExpCSV
             tbLoad.Text = "Ready";
         }
 
+        private void ClearDbConnect_Click(object sender, RoutedEventArgs e)
+        {
+            textBoxDb.Text = null;
+        }
+
+        private void ClearQuery_Click(object sender, RoutedEventArgs e)
+        {
+            textBoxQuery.Text = null;
+        }
+
         private void Exit_Click(object sender, RoutedEventArgs e)
         {
             this.Close();

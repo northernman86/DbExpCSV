@@ -39,6 +39,8 @@
         </Grid.RowDefinitions>
         <Menu x:Name="menu" Grid.Row="0" Background="{StaticResource colorWhite}" Padding="0 0 0 5">
             <MenuItem Header="File">
+                <MenuItem Header="Clear database connection field" Click="ClearDbConnect_Click"/>
+                <MenuItem Header="Clear query execution field" Click="ClearQuery_Click"/>
                 <MenuItem Header="Exit" Click="Exit_Click"/>
             </MenuItem>
             <MenuItem Header="Edit">
