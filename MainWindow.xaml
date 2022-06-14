@@ -44,7 +44,12 @@
                 <MenuItem Header="Exit" Click="Exit_Click"/>
             </MenuItem>
             <MenuItem Header="Edit">
-                
+                <MenuItem Header="Undo" Command="Undo"/>
+                <MenuItem Header="Redo" Command="Redo"/>
+                <MenuItem Header="Cut" Command="Cut"/>
+                <MenuItem Header="Copy" Command="Copy"/>
+                <MenuItem Header="Paste" Command="Paste"/>
+                <MenuItem Header="Delete" Command="Delete"/>
             </MenuItem>
             <MenuItem Header="Help">
                 <Hyperlink Click="Hyperlink_Click">Code on GitHub</Hyperlink>
