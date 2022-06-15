@@ -6,6 +6,13 @@
         xmlns:local="clr-namespace:DbExpCSV"
         mc:Ignorable="d"
         Title="About" Height="450" Width="800" WindowStartupLocation="CenterOwner" ResizeMode="NoResize">
+    <Window.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="FontSize" Value="11"/>
+        </Style>
+    </Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition/>
@@ -13,5 +20,9 @@
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0"/>
+        <TextBlock Grid.Row="1"/>
+        <TextBlock Grid.Row="2"/>
+        <TextBlock Grid.Row="3"/>
     </Grid>
 </Window>
