@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DbExpCSV"
         mc:Ignorable="d"
-        Title="About" Height="450" Width="800" WindowStartupLocation="CenterOwner" ResizeMode="NoResize">
+        Title="About" Height="200" Width="300" WindowStartupLocation="CenterOwner" ResizeMode="NoResize">
     <Window.Resources>
         <Style TargetType="TextBlock">
             <Setter Property="HorizontalAlignment" Value="Center"/>
@@ -15,14 +15,14 @@
     </Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="20"/>
         </Grid.RowDefinitions>
-        <TextBlock Grid.Row="0"/>
-        <TextBlock Grid.Row="1"/>
-        <TextBlock Grid.Row="2"/>
-        <TextBlock Grid.Row="3"/>
+        <TextBlock Grid.Row="0" Text="DbExpCSV" FontSize="30" Margin="0 10 0 0"/>
+        <TextBlock Grid.Row="1" FontSize="15" TextWrapping="Wrap" TextAlignment="Center"/>
+        <TextBlock Grid.Row="2" Text="2022 Aliaksandr Prystauka" FontSize="11"/>
+        <TextBlock Grid.Row="3" Text="GNU General Public License v3.0" FontSize="11"/>
     </Grid>
 </Window>
